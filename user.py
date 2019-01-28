@@ -1,4 +1,4 @@
-import pyperclip
+
 import random
 import string
 
@@ -24,7 +24,6 @@ class Info:
     info_list = []
     users_info = []
 
-    @classmethod
     def __init__(self, username_name, account_name, info_details, password):
         self.username_name = username_name
         self.account_name = account_name
@@ -37,13 +36,17 @@ class Info:
         '''
         Info.info_list.append(self)
 
+    
+    @classmethod
     def clipboard_info(cls, info_details):
         '''
         method that copies the user info to the clipboard
         '''
         find_info = Info.find_by_info_details(info_details)
-        return pyperclip.copy(finf_info.password)
+        return pyperclip.copy(find_info.password)
 
+
+    @classmethod
     def check_User( username, password):
         '''
         method for checking user if exists in the user list array
@@ -55,6 +58,7 @@ class Info:
             return super_user
         
 
+    @classmethod
     def find_by_site_name(cls, info_details):
         '''
         method that takes in a site name and gives out info matching site name
@@ -63,6 +67,7 @@ class Info:
             if information.info_details == info_details:
                 return information
     
+    @classmethod
     def copy_info(cls, info_details):
         '''
         class method for copying info
