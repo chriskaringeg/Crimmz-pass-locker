@@ -43,6 +43,14 @@ def clipboard_info():
 
 def main():
     while True:
+        print("      $$$$$$\  $$\                 $$\ ")         
+        print("     $$ |  $$\ $$ |  $$ |$$ |      $$ | \____$$\ ")
+        print("     $$ /  \__|$$$$$$$\   $$$$$$\  $$\  $$$$$$$\ ")
+        print("     $$ |      $$  __$$\ $$  __$$\ $$ |$$  _____|")
+        print("     $$ |      $$ |  $$ |$$ |  \__|$$ |\$$$$$$\  ")
+        print("     $$  __$$\ $$ |                \__|")         
+        print("     \      $$$$$$  |$$ |  $$ |$$ |$$ |$$$$$$$|  ")
+        print("      \______/ \__|  \__|\__|      \__|\_______/ ")
         print("\n")
         print("**"*50)
         print("******Welcome to password locker******")
@@ -67,11 +75,14 @@ def main():
             print("Log in by entering your account credentials")
             username = input("Enter your username : \n")
             password = input("Enter your password : \n")
-            user_exists = check_user(username, password)
+            user_exists = Info.check_User(username, password)
            
             if user_exists == username :
                 print ("\n")
                 print("Welcome to password Locker")
+
+                
+                                        
                
                 while True:
                     print("\n")
@@ -80,30 +91,30 @@ def main():
                     print("1. Create login information \n 2. copy login infomation \n 3. Exit ")
                     user_Choice = input("Enter choice : ")
                    
-                    if user_Choice == "3":
-                        print(f'Goodbye {username}')
-                        break
+                if user_Choice == "3":
+                    print('Goodbye {username}')
+                    break
                     
-                    elif user_Choice == "1":
-                        print("\n")
-                        print("Enter your infomation")
-                        account_name = input("Enter account name : \n")
-                        info_details = input("Enter the site name : \n")
-                        password = input("Enter password for site: \n")
-                        save_info(create_info(username,account_name,info_details, password))
-                        print("\n")
-                        print("Credentials created successfully.")
+                elif user_Choice == "1":
+                    print("\n")
+                    print("Enter your infomation")
+                    account_name = input("Enter account name : \n")
+                    info_details = input("Enter the site name : \n")
+                    password = input("Enter password for site: \n")
+                    save_info(create_info(username,account_name,info_details, password))
+                    print("\n")
+                    print("Credentials created successfully.")
                     
-                    elif user_Choice == "2":
-                        print("\n")
-                        print("**"*50)
-                        choosen_info = input("Enter the site account to copy your info from. \n")
-                        copy_info(choosen_info)
-                        print("Successfully copied!")
-                        print("\n")
+                elif user_Choice == "2":
+                    print("\n")
+                    print("**"*50)
+                    choosen_info = input("Enter the site account to copy your info from. \n")
+                    copy_info(choosen_info)
+                    print("Successfully copied!")
+                    print("\n")
                     
-                    else:
-                        print("Enter correct option and try again!!!")
+                else:
+                    print("Enter correct option and try again!!!")
 
 
             else:
@@ -112,4 +123,5 @@ def main():
             print("wrong info entered")
 
 if __name__ == '__main__':
-	main()
+        main()
+        

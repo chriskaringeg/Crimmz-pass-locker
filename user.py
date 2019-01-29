@@ -67,10 +67,4 @@ class Info:
             if information.info_details == info_details:
                 return information
     
-    @classmethod
-    def copy_info(cls, info_details):
-        '''
-        class method for copying info
-        '''
-        find_info = Info.find_by_site_name(info_details)
-        return pyperclip.copy(find_info.password)
+   
