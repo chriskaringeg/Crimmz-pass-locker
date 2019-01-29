@@ -13,7 +13,7 @@ As a user I would like:
 
 *To create an account with my details - log in and password.
 *Store my existing login information.
-*Copy my credentials to the clipboa
+*Copy my credentials to the clipboard
 
 
 
