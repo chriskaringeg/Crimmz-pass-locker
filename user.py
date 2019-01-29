@@ -43,7 +43,7 @@ class Info:
         method that copies the user info to the clipboard
         '''
         find_info = Info.find_by_info_details(info_details)
-        return pyperclip.copy(find_info.password)
+        # return pyperclip.copy(find_info.password)
 
 
     @classmethod

@@ -80,9 +80,9 @@ def main():
                     print("1. Create login information \n 2. copy login infomation \n 3. Exit ")
                     user_Choice = input("Enter choice : ")
                    
-                if user_Choice == "3":
-                    print(f'Goodbye {username}')
-                    break
+                    if user_Choice == "3":
+                        print(f'Goodbye {username}')
+                        break
                     
                     elif user_Choice == "1":
                         print("\n")

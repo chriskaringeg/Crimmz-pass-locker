@@ -5,20 +5,33 @@
 
 Password locker is a Python application that enables one to hide his or her credentials of their accounts
 
+##User stories
+ 
+These are the behaviours/features that the application implements for use by a user.
+
+As a user I would like:
+
+*To create an account with my details - log in and password.
+*Store my existing login information.
+*Copy my credentials to the clipboa
+
 
 
 ## Set-up/requirement 
+Prerequisites
+python3.6
+pyperclip
+Cloning
+In your terminal:
 
-
-
-## known bugs
-
-## Behaviour Development
-
+  $ git clone https://github.com/chriskaringeg/crimmz-pass-locker
+  $ cd crimmz-Pass-Locker
 ## Technologies used
+ Python3.6
 ## Support and contact Details
+ for more information please find me through my email ckaringe@gmail.com
 
-MIT License
+##MIT License
 
 Copyright (c) [2019] [Karinge Kinyua]
 
