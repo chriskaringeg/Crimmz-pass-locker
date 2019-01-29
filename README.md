@@ -5,7 +5,7 @@
 
 Password locker is a Python application that enables one to hide his or her credentials of their accounts
 
-##User stories
+## User stories
  
 These are the behaviours/features that the application implements for use by a user.
 
