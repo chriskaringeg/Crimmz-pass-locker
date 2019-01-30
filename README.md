@@ -1,5 +1,5 @@
 # Password locker
- This project was created on 25 january by 
+ This project was created on  january 25 by 
   Karinge Kinyua.
 
 ## Description
