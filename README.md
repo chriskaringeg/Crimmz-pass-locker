@@ -1,9 +1,12 @@
 # Password locker
-
+ This project was created on 25 january by 
+  Karinge Kinyua.
 
 ## Description
 
-Password locker is a Python application that enables one to hide his or her credentials of their accounts
+Password locker is a Python application that enables one to hide his or her credentials of their accounts.
+This enables one to even hide information before initiating an account..It acts as a fort to one's credentials
+
 
 ## User stories
  
@@ -24,8 +27,8 @@ pyperclip
 Cloning
 In your terminal:
 
-  $ git clone https://github.com/chriskaringeg/crimmz-pass-locker
-  $ cd crimmz-Pass-Locker
+  $ git clone https://github.com/chriskaringeg/Crimmz-pass-locker
+  $ cd Crimmz-Pass-Locker
 ## Technologies used
  Python3.6
 ## Support and contact Details
