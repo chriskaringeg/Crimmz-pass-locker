@@ -42,6 +42,7 @@ In your terminal:
  Python3.6
 ## Support and contact Details
  for more information please find me through my email ckaringe@gmail.com
+ cell.0797306284
 
 ##MIT License
 
