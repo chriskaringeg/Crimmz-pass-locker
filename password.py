@@ -72,7 +72,7 @@ def main():
             print ("\n")
             username = input('Create a username  ')
             password= input("Create password  ")
-            save_user(register_user(username, password))
+            save_user(register_user( username, password))
             print("Account created successfully!!")
 
         elif choice == "2":
@@ -80,7 +80,7 @@ def main():
             print("Log in by entering your account credentials")
             username = input("Enter your username : \n")
             password = input("Enter your password : \n")
-            user_exists = Info.check_User(username, password)
+            user_exists = Info.check_User(self,userusername,password)
            
             if user_exists == username :
                 print ("\n")
@@ -128,4 +128,4 @@ def main():
             print("wrong info entered")
 
 if __name__ == '__main__':
-        main()
+   main()

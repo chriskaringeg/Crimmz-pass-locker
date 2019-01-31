@@ -1,5 +1,5 @@
 import unittest
-import pyperclip
+# import pyperclip
 from user import User, Info
 
 
@@ -14,7 +14,7 @@ def setUp(self):
 	'''
     Function to create a user account before each test
     '''
-    self.new_user = User("Chris","admin")
+    # self.new_User = User("Chris","admin")
 
 def test__init(self):
     '''
