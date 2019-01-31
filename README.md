@@ -44,7 +44,7 @@ In your terminal:
  for more information please find me through my email ckaringe@gmail.com
  cell.0797306284
 
-##MIT License
+## MIT License
 
 Copyright (c) [2019] [Karinge Kinyua]
 
