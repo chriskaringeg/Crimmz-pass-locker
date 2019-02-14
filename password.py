@@ -80,7 +80,7 @@ def main():
             print("Log in by entering your account credentials")
             username = input("Enter your username : \n")
             password = input("Enter your password : \n")
-            user_exists = Info.check_User(self,userusername,password)
+            # user_exists = Info.check_User(userusername,password)
            
             if user_exists == username :
                 print ("\n")
@@ -128,4 +128,4 @@ def main():
             print("wrong info entered")
 
 if __name__ == '__main__':
-    main()
+    main(),
