@@ -1,70 +1,34 @@
-
-import random
-import string
-
-global user_list
 class User:
-    """
-    Class that generates new instances of the user to sign up.
-    """
-    info_list = [] #empty info list
+    '''
+    Class that generates new instances of users
+    '''
     user_list = [] #Empty user list
-    #this are instance variables
-    def __init__(self,username,password):
-        self.username = username
-        self.password = password
-
-    def register(self):
-       User.user_list.append(self)
-
-class Info:
-    '''
-    Class to create new infomation of a user
-    '''
-    info_list = []
-    users_info = []
-
-    def __init__(self, username_name, account_name, info_details, password):
-        self.username_name = username_name
-        self.account_name = account_name
-        self.info_details = info_details
-        self.password = password
-
-    def save_info(self):
-        '''
-        created a function to new info of a user
-        '''
-        Info.info_list.append(self)
-
     
-    @classmethod
-    def clipboard_info(cls, info_details):
+    def __init__(self,first_name , last_name):
         '''
-        method that copies the user info to the clipboard
+        init method to create instances of the user class
+        Args:
+            first_name: New User.first_name
+            last_name: New user.last_name
         '''
-        find_info = Info.find_by_info_details(info_details)
-        # return pyperclip.copy(find_info.password)
+        self.first_name = first_name
+        self.last_name = last_name
 
+    def save_user(self):
+        '''
+        save_user method to save new users into user_list
+        '''
+        User.user_list.append(self)
+
+    def delete_user(self):
+        '''
+        delete method to delete saved user from the user list
+        '''
+        User.user_list.remove(self)
 
     @classmethod
-    def check_User( username, password):
+    def display_users(cls):
         '''
-        method for checking user if exists in the user list array
+        method that returns the user list
         '''
-        super_user = ""
-        for user in User.user_list:
-            if (user.username == username and user.password == password):
-                super_user = user.username
-            return super_user
-        
-
-    @classmethod
-    def find_by_site_name(cls, info_details):
-        '''
-        method that takes in a site name and gives out info matching site name
-        '''
-        for information in cls.info_list:
-            if information.info_details == info_details:
-                return information
-    
-   
+        return cls.user_list

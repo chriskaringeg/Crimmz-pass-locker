@@ -1,34 +1,67 @@
 import unittest
-# import pyperclip
-from user import User, Info
+from user import User
 
-
-class TestUser (unittest.TestCase):
+class TestUser(unittest .TestCase):
     '''
-	Test class that defines test cases for the user class behaviours.
-	Args:
-	    unittest.TestCase: helps in creating test cases
-	'''
-
-def setUp(self):
-	'''
-    Function to create a user account before each test
+    Tets case that defines test cases for the user class
+    behaviours
+    
+    Args:
+        unittest.TestUser: TestUser class that helps in creating test cases
     '''
-    # self.new_User = User("Chris","admin")
 
-def test__init(self):
-    '''
-	Test to if check the initialization/creation of user instances is properly done
-	'''
-    self.assertEqual(self.new_user.username,'Chris')
-    self.assertEqual(self.new_user.password,'admin')
+    def setUp(self):
+        '''
+        set up method to run before each test cases
+        '''
+        self.new_user = User('Chris' , 'Karinge')
 
-def test_save_user(self):
-    '''
-	Test to check if the new users info is saved into the user list
-	'''
-    self.new_user.register()
-    self.assertEqual(len(User.user_list),1)
+    def tearDown(self):
+        '''tear down method to clean up after every test
+        '''
+        User.user_list = [] #Returns an empty user list after every test
 
+    def test_init(self):
+        '''
+        Test to see if users are instanciated properties
+        '''
+        self.assertEqual(self.new_user.first_name , 'Chris')
+        self.assertEqual(self.new_user.last_name , 'Karinge')
+
+
+    def test_save_user(self):
+        '''
+        Test to see if users are saved in the user_list
+        '''
+        self.new_user.save_user() #saving new user
+        self.assertEqual(len(User.user_list) , 1)
+
+
+    def test_save_multiple_users(self):
+        '''
+        Test to see if multiple users can be saved
+        '''
+        self.new_user.save_user()
+        dummy_user = User('Loise' , 'Kimani') #new dummy user
+        dummy_user.save_user()
+        self.assertEqual(len(User.user_list) , 2)
+
+
+    def test_delete_user(self):
+        '''
+        Test to see if we can delete a user from user list
+        '''
+        self.new_user.save_user()
+        dummy_user = User('Loise' , 'kimani')
+        dummy_user.save_user()
+        self.new_user.delete_user() #Deleting a user from the user list
+        self.assertEqual(len(User.user_list) , 1)
+  
+
+    def test_display_all_users(self):
+        '''
+        method that returns a list of all users saved
+        '''
+        self.assertEqual(User.display_users() , User.user_list)
 if __name__ == '__main__':
-	unittest.main()
+    unittest.main()
