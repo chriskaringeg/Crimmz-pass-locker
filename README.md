@@ -17,7 +17,7 @@ As a user I would like:
 
 * To create an account with my details - log in and password.
 * Store my existing login information.
-* gCopy my credentials to the clipboard
+* Copy my credentials to the clipboard
 
 
 
