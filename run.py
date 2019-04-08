@@ -62,7 +62,7 @@ def main():
                 print(f'Logged in as {f_name}')
             else:
                 print('user name or password incorrect')
-            print(' View existing acconts')
+            print(' View existing accounts')
             print('Add new account')                             
             acnt = input()
             if acnt == '2':
